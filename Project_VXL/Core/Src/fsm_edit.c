@@ -29,11 +29,11 @@ void fsm_edit()
 			}
 
 			lcd_clear_display();
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Red LED Mode");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Red LED Mode");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Duration: ");
-			lcd_display(1, 10, duration_R + duration_ADD);
+			lcd_display(2, 10, duration_R + duration_ADD);
 
 
 			if (isButton3Pressed() == 1)
@@ -70,11 +70,11 @@ void fsm_edit()
 				button2_long_pressed = 0;
 			}
 			lcd_clear_display();
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Yellow LED Mode");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Yellow LED Mode");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Duration: ");
-			lcd_display(1, 10, duration_Y + duration_ADD);
+			lcd_display(2, 10, duration_Y + duration_ADD);
 			if (isButton3Pressed() == 1)
 			{
 				duration_Y += duration_ADD;
@@ -107,11 +107,11 @@ void fsm_edit()
 				button2_long_pressed = 0;
 			}
 			lcd_clear_display();
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Green LED Mode");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Green LED Mode");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Duration: ");
-			lcd_display(1, 10, duration_G + duration_ADD);
+			lcd_display(2, 10, duration_G + duration_ADD);
 			if (isButton3Pressed() == 1)
 			{
 				duration_G += duration_ADD;
@@ -136,9 +136,9 @@ void fsm_edit()
 				status = 6;
 				button3_flag = 0;
 			}
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Green");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Green");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Red");
 			if (isButton2Pressed() == 1)
 			{
@@ -156,9 +156,9 @@ void fsm_edit()
 				button3_flag = 0;
 				lcd_clear_display();
 			}
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Yellow");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Yellow");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Red");
 			if (isButton2Pressed() == 1)
 			{
@@ -176,9 +176,9 @@ void fsm_edit()
 				status = 8;
 				button3_flag = 0;
 			}
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Red");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Red");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Green");
 			if (isButton2Pressed() == 1)
 			{
@@ -196,9 +196,9 @@ void fsm_edit()
 				status = 5;
 				button3_flag = 0;
 			}
-			lcd_goto_XY(0, 0);
-			lcd_send_string("Red");
 			lcd_goto_XY(1, 0);
+			lcd_send_string("Red");
+			lcd_goto_XY(2, 0);
 			lcd_send_string("Yellow");
 			if (isButton2Pressed() == 1)
 			{

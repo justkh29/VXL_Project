@@ -753,14 +753,14 @@ void fsm_auto_run()
 			{
 				lcd_clear_display();
  800051a:	f000 fc96 	bl	8000e4a <lcd_clear_display>
-				lcd_display(0, 0, count);
+				lcd_display(1, 0, count);
  800051e:	4b79      	ldr	r3, [pc, #484]	; (8000704 <fsm_auto_run+0x23c>)
  8000520:	681b      	ldr	r3, [r3, #0]
  8000522:	461a      	mov	r2, r3
  8000524:	2100      	movs	r1, #0
- 8000526:	2000      	movs	r0, #0
+ 8000526:	2001      	movs	r0, #1
  8000528:	f000 fcb8 	bl	8000e9c <lcd_display>
-				lcd_display(1, 0, count + duration_Y);
+				lcd_display(2, 0, count + duration_Y);
  800052c:	4b75      	ldr	r3, [pc, #468]	; (8000704 <fsm_auto_run+0x23c>)
  800052e:	681a      	ldr	r2, [r3, #0]
  8000530:	4b76      	ldr	r3, [pc, #472]	; (800070c <fsm_auto_run+0x244>)
@@ -768,7 +768,7 @@ void fsm_auto_run()
  8000534:	4413      	add	r3, r2
  8000536:	461a      	mov	r2, r3
  8000538:	2100      	movs	r1, #0
- 800053a:	2001      	movs	r0, #1
+ 800053a:	2002      	movs	r0, #2
  800053c:	f000 fcae 	bl	8000e9c <lcd_display>
 				count--;
  8000540:	4b70      	ldr	r3, [pc, #448]	; (8000704 <fsm_auto_run+0x23c>)
@@ -827,19 +827,19 @@ void fsm_auto_run()
 			{
 				lcd_clear_display();
  8000594:	f000 fc59 	bl	8000e4a <lcd_clear_display>
-				lcd_display(0, 0, count);
+				lcd_display(1, 0, count);
  8000598:	4b5a      	ldr	r3, [pc, #360]	; (8000704 <fsm_auto_run+0x23c>)
  800059a:	681b      	ldr	r3, [r3, #0]
  800059c:	461a      	mov	r2, r3
  800059e:	2100      	movs	r1, #0
- 80005a0:	2000      	movs	r0, #0
+ 80005a0:	2001      	movs	r0, #1
  80005a2:	f000 fc7b 	bl	8000e9c <lcd_display>
-				lcd_display(1, 0, count);
+				lcd_display(2, 0, count);
  80005a6:	4b57      	ldr	r3, [pc, #348]	; (8000704 <fsm_auto_run+0x23c>)
  80005a8:	681b      	ldr	r3, [r3, #0]
  80005aa:	461a      	mov	r2, r3
  80005ac:	2100      	movs	r1, #0
- 80005ae:	2001      	movs	r0, #1
+ 80005ae:	2002      	movs	r0, #2
  80005b0:	f000 fc74 	bl	8000e9c <lcd_display>
 				count--;
  80005b4:	4b53      	ldr	r3, [pc, #332]	; (8000704 <fsm_auto_run+0x23c>)
@@ -902,7 +902,7 @@ void fsm_auto_run()
 			{
 				lcd_clear_display();
  800060c:	f000 fc1d 	bl	8000e4a <lcd_clear_display>
-				lcd_display(0, 0, count + duration_Y);
+				lcd_display(1, 0, count + duration_Y);
  8000610:	4b3c      	ldr	r3, [pc, #240]	; (8000704 <fsm_auto_run+0x23c>)
  8000612:	681a      	ldr	r2, [r3, #0]
  8000614:	4b3d      	ldr	r3, [pc, #244]	; (800070c <fsm_auto_run+0x244>)
@@ -910,14 +910,14 @@ void fsm_auto_run()
  8000618:	4413      	add	r3, r2
  800061a:	461a      	mov	r2, r3
  800061c:	2100      	movs	r1, #0
- 800061e:	2000      	movs	r0, #0
+ 800061e:	2001      	movs	r0, #1
  8000620:	f000 fc3c 	bl	8000e9c <lcd_display>
-				lcd_display(1, 0, count);
+				lcd_display(2, 0, count);
  8000624:	4b37      	ldr	r3, [pc, #220]	; (8000704 <fsm_auto_run+0x23c>)
  8000626:	681b      	ldr	r3, [r3, #0]
  8000628:	461a      	mov	r2, r3
  800062a:	2100      	movs	r1, #0
- 800062c:	2001      	movs	r0, #1
+ 800062c:	2002      	movs	r0, #2
  800062e:	f000 fc35 	bl	8000e9c <lcd_display>
 				count--;
  8000632:	4b34      	ldr	r3, [pc, #208]	; (8000704 <fsm_auto_run+0x23c>)
@@ -976,19 +976,19 @@ void fsm_auto_run()
 			{
 				lcd_clear_display();
  8000684:	f000 fbe1 	bl	8000e4a <lcd_clear_display>
-				lcd_display(0, 0, count);
+				lcd_display(1, 0, count);
  8000688:	4b1e      	ldr	r3, [pc, #120]	; (8000704 <fsm_auto_run+0x23c>)
  800068a:	681b      	ldr	r3, [r3, #0]
  800068c:	461a      	mov	r2, r3
  800068e:	2100      	movs	r1, #0
- 8000690:	2000      	movs	r0, #0
+ 8000690:	2001      	movs	r0, #1
  8000692:	f000 fc03 	bl	8000e9c <lcd_display>
-				lcd_display(1, 0, count);
+				lcd_display(2, 0, count);
  8000696:	4b1b      	ldr	r3, [pc, #108]	; (8000704 <fsm_auto_run+0x23c>)
  8000698:	681b      	ldr	r3, [r3, #0]
  800069a:	461a      	mov	r2, r3
  800069c:	2100      	movs	r1, #0
- 800069e:	2001      	movs	r0, #1
+ 800069e:	2002      	movs	r0, #2
  80006a0:	f000 fbfc 	bl	8000e9c <lcd_display>
 				count--;
  80006a4:	4b17      	ldr	r3, [pc, #92]	; (8000704 <fsm_auto_run+0x23c>)
@@ -1158,21 +1158,21 @@ void fsm_edit()
 
 			lcd_clear_display();
  80007d4:	f000 fb39 	bl	8000e4a <lcd_clear_display>
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  80007d8:	2100      	movs	r1, #0
- 80007da:	2000      	movs	r0, #0
+ 80007da:	2001      	movs	r0, #1
  80007dc:	f000 fb3c 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Red LED Mode");
  80007e0:	4860      	ldr	r0, [pc, #384]	; (8000964 <fsm_edit+0x24c>)
  80007e2:	f000 fb1d 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  80007e6:	2100      	movs	r1, #0
- 80007e8:	2001      	movs	r0, #1
+ 80007e8:	2002      	movs	r0, #2
  80007ea:	f000 fb35 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Duration: ");
  80007ee:	485e      	ldr	r0, [pc, #376]	; (8000968 <fsm_edit+0x250>)
  80007f0:	f000 fb16 	bl	8000e20 <lcd_send_string>
-			lcd_display(1, 10, duration_R + duration_ADD);
+			lcd_display(2, 10, duration_R + duration_ADD);
  80007f4:	4b5d      	ldr	r3, [pc, #372]	; (800096c <fsm_edit+0x254>)
  80007f6:	681a      	ldr	r2, [r3, #0]
  80007f8:	4b57      	ldr	r3, [pc, #348]	; (8000958 <fsm_edit+0x240>)
@@ -1180,7 +1180,7 @@ void fsm_edit()
  80007fc:	4413      	add	r3, r2
  80007fe:	461a      	mov	r2, r3
  8000800:	210a      	movs	r1, #10
- 8000802:	2001      	movs	r0, #1
+ 8000802:	2002      	movs	r0, #2
  8000804:	f000 fb4a 	bl	8000e9c <lcd_display>
 
 
@@ -1302,21 +1302,21 @@ void fsm_edit()
 			}
 			lcd_clear_display();
  80008ce:	f000 fabc 	bl	8000e4a <lcd_clear_display>
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  80008d2:	2100      	movs	r1, #0
- 80008d4:	2000      	movs	r0, #0
+ 80008d4:	2001      	movs	r0, #1
  80008d6:	f000 fabf 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Yellow LED Mode");
  80008da:	4826      	ldr	r0, [pc, #152]	; (8000974 <fsm_edit+0x25c>)
  80008dc:	f000 faa0 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  80008e0:	2100      	movs	r1, #0
- 80008e2:	2001      	movs	r0, #1
+ 80008e2:	2002      	movs	r0, #2
  80008e4:	f000 fab8 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Duration: ");
  80008e8:	481f      	ldr	r0, [pc, #124]	; (8000968 <fsm_edit+0x250>)
  80008ea:	f000 fa99 	bl	8000e20 <lcd_send_string>
-			lcd_display(1, 10, duration_Y + duration_ADD);
+			lcd_display(2, 10, duration_Y + duration_ADD);
  80008ee:	4b22      	ldr	r3, [pc, #136]	; (8000978 <fsm_edit+0x260>)
  80008f0:	681a      	ldr	r2, [r3, #0]
  80008f2:	4b19      	ldr	r3, [pc, #100]	; (8000958 <fsm_edit+0x240>)
@@ -1324,7 +1324,7 @@ void fsm_edit()
  80008f6:	4413      	add	r3, r2
  80008f8:	461a      	mov	r2, r3
  80008fa:	210a      	movs	r1, #10
- 80008fc:	2001      	movs	r0, #1
+ 80008fc:	2002      	movs	r0, #2
  80008fe:	f000 facd 	bl	8000e9c <lcd_display>
 			if (isButton3Pressed() == 1)
  8000902:	f7ff fc43 	bl	800018c <isButton3Pressed>
@@ -1455,21 +1455,21 @@ void fsm_edit()
 			}
 			lcd_clear_display();
  80009fc:	f000 fa25 	bl	8000e4a <lcd_clear_display>
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  8000a00:	2100      	movs	r1, #0
- 8000a02:	2000      	movs	r0, #0
+ 8000a02:	2001      	movs	r0, #1
  8000a04:	f000 fa28 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Green LED Mode");
  8000a08:	4885      	ldr	r0, [pc, #532]	; (8000c20 <fsm_edit+0x508>)
  8000a0a:	f000 fa09 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  8000a0e:	2100      	movs	r1, #0
- 8000a10:	2001      	movs	r0, #1
+ 8000a10:	2002      	movs	r0, #2
  8000a12:	f000 fa21 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Duration: ");
  8000a16:	4883      	ldr	r0, [pc, #524]	; (8000c24 <fsm_edit+0x50c>)
  8000a18:	f000 fa02 	bl	8000e20 <lcd_send_string>
-			lcd_display(1, 10, duration_G + duration_ADD);
+			lcd_display(2, 10, duration_G + duration_ADD);
  8000a1c:	4b82      	ldr	r3, [pc, #520]	; (8000c28 <fsm_edit+0x510>)
  8000a1e:	681a      	ldr	r2, [r3, #0]
  8000a20:	4b7c      	ldr	r3, [pc, #496]	; (8000c14 <fsm_edit+0x4fc>)
@@ -1477,7 +1477,7 @@ void fsm_edit()
  8000a24:	4413      	add	r3, r2
  8000a26:	461a      	mov	r2, r3
  8000a28:	210a      	movs	r1, #10
- 8000a2a:	2001      	movs	r0, #1
+ 8000a2a:	2002      	movs	r0, #2
  8000a2c:	f000 fa36 	bl	8000e9c <lcd_display>
 			if (isButton3Pressed() == 1)
  8000a30:	f7ff fbac 	bl	800018c <isButton3Pressed>
@@ -1548,16 +1548,16 @@ void fsm_edit()
  8000a94:	2200      	movs	r2, #0
  8000a96:	601a      	str	r2, [r3, #0]
 			}
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  8000a98:	2100      	movs	r1, #0
- 8000a9a:	2000      	movs	r0, #0
+ 8000a9a:	2001      	movs	r0, #1
  8000a9c:	f000 f9dc 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Green");
  8000aa0:	4864      	ldr	r0, [pc, #400]	; (8000c34 <fsm_edit+0x51c>)
  8000aa2:	f000 f9bd 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  8000aa6:	2100      	movs	r1, #0
- 8000aa8:	2001      	movs	r0, #1
+ 8000aa8:	2002      	movs	r0, #2
  8000aaa:	f000 f9d5 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Red");
  8000aae:	4862      	ldr	r0, [pc, #392]	; (8000c38 <fsm_edit+0x520>)
@@ -1605,16 +1605,16 @@ void fsm_edit()
 				lcd_clear_display();
  8000af2:	f000 f9aa 	bl	8000e4a <lcd_clear_display>
 			}
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  8000af6:	2100      	movs	r1, #0
- 8000af8:	2000      	movs	r0, #0
+ 8000af8:	2001      	movs	r0, #1
  8000afa:	f000 f9ad 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Yellow");
  8000afe:	4850      	ldr	r0, [pc, #320]	; (8000c40 <fsm_edit+0x528>)
  8000b00:	f000 f98e 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  8000b04:	2100      	movs	r1, #0
- 8000b06:	2001      	movs	r0, #1
+ 8000b06:	2002      	movs	r0, #2
  8000b08:	f000 f9a6 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Red");
  8000b0c:	484a      	ldr	r0, [pc, #296]	; (8000c38 <fsm_edit+0x520>)
@@ -1662,16 +1662,16 @@ void fsm_edit()
  8000b4e:	2200      	movs	r2, #0
  8000b50:	601a      	str	r2, [r3, #0]
 			}
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  8000b52:	2100      	movs	r1, #0
- 8000b54:	2000      	movs	r0, #0
+ 8000b54:	2001      	movs	r0, #1
  8000b56:	f000 f97f 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Red");
  8000b5a:	4837      	ldr	r0, [pc, #220]	; (8000c38 <fsm_edit+0x520>)
  8000b5c:	f000 f960 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  8000b60:	2100      	movs	r1, #0
- 8000b62:	2001      	movs	r0, #1
+ 8000b62:	2002      	movs	r0, #2
  8000b64:	f000 f978 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Green");
  8000b68:	4832      	ldr	r0, [pc, #200]	; (8000c34 <fsm_edit+0x51c>)
@@ -1719,16 +1719,16 @@ void fsm_edit()
  8000baa:	2200      	movs	r2, #0
  8000bac:	601a      	str	r2, [r3, #0]
 			}
-			lcd_goto_XY(0, 0);
+			lcd_goto_XY(1, 0);
  8000bae:	2100      	movs	r1, #0
- 8000bb0:	2000      	movs	r0, #0
+ 8000bb0:	2001      	movs	r0, #1
  8000bb2:	f000 f951 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Red");
  8000bb6:	4820      	ldr	r0, [pc, #128]	; (8000c38 <fsm_edit+0x520>)
  8000bb8:	f000 f932 	bl	8000e20 <lcd_send_string>
-			lcd_goto_XY(1, 0);
+			lcd_goto_XY(2, 0);
  8000bbc:	2100      	movs	r1, #0
- 8000bbe:	2001      	movs	r0, #1
+ 8000bbe:	2002      	movs	r0, #2
  8000bc0:	f000 f94a 	bl	8000e58 <lcd_goto_XY>
 			lcd_send_string("Yellow");
  8000bc4:	481e      	ldr	r0, [pc, #120]	; (8000c40 <fsm_edit+0x528>)
