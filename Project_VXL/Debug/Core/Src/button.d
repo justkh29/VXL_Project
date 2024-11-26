@@ -27,7 +27,7 @@ Core/Src/button.o: ../Core/Src/button.c ../Core/Inc/button.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/light_traffic.h ../Core/Inc/fsm_auto.h \
  ../Core/Inc/fsm_setting.h ../Core/Inc/software_timer.h \
- ../Core/Inc/global_var.h
+ ../Core/Inc/global_var.h ../Core/Inc/i2c_LCD.h ../Core/Inc/main.h
 
 ../Core/Inc/button.h:
 
@@ -94,3 +94,7 @@ Core/Src/button.o: ../Core/Src/button.c ../Core/Inc/button.h \
 ../Core/Inc/software_timer.h:
 
 ../Core/Inc/global_var.h:
+
+../Core/Inc/i2c_LCD.h:
+
+../Core/Inc/main.h:

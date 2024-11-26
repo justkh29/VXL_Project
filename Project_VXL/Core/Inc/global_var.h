@@ -13,7 +13,6 @@
 extern int duration_G;
 extern int duration_R;
 extern int duration_Y;
-extern int duration_G1;
 extern int mode;
 extern int status;
 extern int duration_ADD;

@@ -11,7 +11,7 @@
 #include <main.h>
 #include <fsm_setting.h>
 #include <global_var.h>
-//#include <7SegLED.h>
+#include <i2c_LCD.h>
 void fsm_edit();
 
 

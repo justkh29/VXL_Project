@@ -13,7 +13,7 @@ void changeMode()
 	mode++;
 	if (mode >= 5)
 	{
-		mode = 2;
+		mode = 1;
 	}
 	switch(mode)
 	{
@@ -43,10 +43,10 @@ void fsm_config()
 		button1_flag = 0;
 		button1_long_pressed = 0;
 	}
-	if (isButton1LongPressed() == 1)
+	if (isButton3LongPressed() == 1)
 	{
-		status = 1;
-		mode = 1;
-		button1_long_pressed = 0;
+		ledReset();
+		status = 5;
+		button3_long_pressed = 0;
 	}
 }

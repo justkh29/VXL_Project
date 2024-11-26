@@ -9,6 +9,7 @@
 #define INC_I2C_LCD_H_
 
 #include "main.h"
+#include <stdio.h>
 
 void lcd_init (void);   // initialize lcd
 
@@ -22,5 +23,5 @@ void lcd_clear_display (void);	//clear display lcd
 
 void lcd_goto_XY (int row, int col); //set proper location on screen
 
-
+void lcd_display(int row, int col, int value);
 #endif /* INC_I2C_LCD_H_ */

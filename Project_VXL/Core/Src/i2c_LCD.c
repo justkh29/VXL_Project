@@ -76,3 +76,11 @@ void lcd_goto_XY (int row, int col)
 	}
 	lcd_send_cmd(pos_Addr);
 }
+
+void lcd_display(int row, int col, int value)
+{
+	char buffer[16];
+	sprintf(buffer, "%d", value);
+	lcd_goto_XY(row, col);
+	lcd_send_string(buffer);
+}

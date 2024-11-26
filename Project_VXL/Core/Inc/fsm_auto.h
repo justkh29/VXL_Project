@@ -12,6 +12,7 @@
 #include <light_traffic.h>
 #include <fsm_setting.h>
 #include <global_var.h>
+#include <i2c_LCD.h>
 //#include <7SegLED.h>
 
 void fsm_auto_run();
