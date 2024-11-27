@@ -28,7 +28,6 @@ void fsm_edit()
 				button2_long_pressed = 0;
 			}
 
-			lcd_clear_display();
 			lcd_goto_XY(1, 0);
 			lcd_send_string("Red LED Mode");
 			lcd_goto_XY(2, 0);
@@ -69,7 +68,6 @@ void fsm_edit()
 				button2_flag = 0;
 				button2_long_pressed = 0;
 			}
-			lcd_clear_display();
 			lcd_goto_XY(1, 0);
 			lcd_send_string("Yellow LED Mode");
 			lcd_goto_XY(2, 0);
@@ -106,7 +104,6 @@ void fsm_edit()
 				button2_flag = 0;
 				button2_long_pressed = 0;
 			}
-			lcd_clear_display();
 			lcd_goto_XY(1, 0);
 			lcd_send_string("Green LED Mode");
 			lcd_goto_XY(2, 0);
@@ -129,6 +126,10 @@ void fsm_edit()
 			break;
 		case MAN_GREEN_RED:
 			ledGreen_Red();
+			lcd_goto_XY(1, 0);
+			lcd_send_string("Green");
+			lcd_goto_XY(2, 0);
+			lcd_send_string("Red");
 			if (isButton3Pressed() == 1)
 			{
 				lcd_clear_display();
@@ -136,12 +137,10 @@ void fsm_edit()
 				status = 6;
 				button3_flag = 0;
 			}
-			lcd_goto_XY(1, 0);
-			lcd_send_string("Green");
-			lcd_goto_XY(2, 0);
-			lcd_send_string("Red");
+
 			if (isButton2Pressed() == 1)
 			{
+				lcd_clear_display();
 				status = 0;
 				mode = 1;
 				button2_flag = 0;
@@ -149,6 +148,10 @@ void fsm_edit()
 			break;
 		case MAN_YELLOW_RED:
 			ledYellow_Red();
+			lcd_goto_XY(1, 0);
+			lcd_send_string("Yellow");
+			lcd_goto_XY(2, 0);
+			lcd_send_string("Red");
 			if (isButton3Pressed() == 1)
 			{
 				ledReset();
@@ -156,12 +159,10 @@ void fsm_edit()
 				button3_flag = 0;
 				lcd_clear_display();
 			}
-			lcd_goto_XY(1, 0);
-			lcd_send_string("Yellow");
-			lcd_goto_XY(2, 0);
-			lcd_send_string("Red");
+
 			if (isButton2Pressed() == 1)
 			{
+				lcd_clear_display();
 				status = 0;
 				mode = 1;
 				button2_flag = 0;
@@ -169,6 +170,10 @@ void fsm_edit()
 			break;
 		case MAN_RED_GREEN:
 			ledRed_Green();
+			lcd_goto_XY(1, 0);
+			lcd_send_string("Red");
+			lcd_goto_XY(2, 0);
+			lcd_send_string("Green");
 			if (isButton3Pressed() == 1)
 			{
 				lcd_clear_display();
@@ -176,12 +181,10 @@ void fsm_edit()
 				status = 8;
 				button3_flag = 0;
 			}
-			lcd_goto_XY(1, 0);
-			lcd_send_string("Red");
-			lcd_goto_XY(2, 0);
-			lcd_send_string("Green");
+
 			if (isButton2Pressed() == 1)
 			{
+				lcd_clear_display();
 				status = 0;
 				mode = 1;
 				button2_flag = 0;
@@ -189,6 +192,10 @@ void fsm_edit()
 			break;
 		case MAN_RED_YELLOW:
 			ledRed_Yellow();
+			lcd_goto_XY(1, 0);
+			lcd_send_string("Red");
+			lcd_goto_XY(2, 0);
+			lcd_send_string("Yellow");
 			if (isButton3Pressed() == 1)
 			{
 				lcd_clear_display();
@@ -196,12 +203,10 @@ void fsm_edit()
 				status = 5;
 				button3_flag = 0;
 			}
-			lcd_goto_XY(1, 0);
-			lcd_send_string("Red");
-			lcd_goto_XY(2, 0);
-			lcd_send_string("Yellow");
+
 			if (isButton2Pressed() == 1)
 			{
+				lcd_clear_display();
 				status = 0;
 				mode = 1;
 				button2_flag = 0;

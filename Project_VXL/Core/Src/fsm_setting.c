@@ -39,12 +39,14 @@ void fsm_config()
 {
 	if (isButton1Pressed() == 1)
 	{
+		lcd_clear_display();
 		changeMode();
 		button1_flag = 0;
 		button1_long_pressed = 0;
 	}
 	if (isButton3LongPressed() == 1)
 	{
+		lcd_clear_display();
 		ledReset();
 		status = 5;
 		button3_long_pressed = 0;
