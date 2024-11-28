@@ -52,6 +52,7 @@ void fsm_auto_run()
 					ledReset();
 					status = 3;
 					count = duration_R - duration_Y;
+					lcd_clear_display();
 				}
 				timer_flag[0] = 0;
 				setTimer(0, 1000);
@@ -74,6 +75,7 @@ void fsm_auto_run()
 					ledReset();
 					status = 4;
 					count = duration_Y;
+					lcd_clear_display();
 				}
 				timer_flag[0] = 0;
 				setTimer(0, 1000);
@@ -96,6 +98,7 @@ void fsm_auto_run()
 					ledReset();
 					status = 1;
 					count = duration_G;
+					lcd_clear_display();
 				}
 				timer_flag[0] = 0;
 				setTimer(0, 1000);

@@ -24,6 +24,11 @@ void fsm_edit()
 			if (isButton2Pressed() == 1 || isButton2LongPressed() == 1)
 			{
 				duration_ADD++;
+				if (duration_ADD + duration_R > 99)
+				{
+					lcd_clear_display();
+					duration_ADD = 0;
+				}
 				button2_flag = 0;
 				button2_long_pressed = 0;
 			}
@@ -38,10 +43,6 @@ void fsm_edit()
 			if (isButton3Pressed() == 1)
 			{
 				duration_R += duration_ADD;
-				if (duration_R > 99)
-				{
-					duration_R = 1;
-				}
 				duration_ADD = 0;
 				button3_flag = 0;
 			}
@@ -64,7 +65,11 @@ void fsm_edit()
 			if (isButton2Pressed() == 1 || isButton2LongPressed() == 1)
 			{
 				duration_ADD++;
-
+				if ((duration_Y + duration_ADD > duration_R - 1) || (duration_Y + duration_ADD > duration_G - 2))
+				{
+					lcd_clear_display();
+					duration_ADD = 0;
+				}
 				button2_flag = 0;
 				button2_long_pressed = 0;
 			}
@@ -76,10 +81,6 @@ void fsm_edit()
 			if (isButton3Pressed() == 1)
 			{
 				duration_Y += duration_ADD;
-				if (duration_Y > 99)
-				{
-					duration_Y = 1;
-				}
 				duration_ADD = 0;
 				button3_flag = 0;
 			}
@@ -101,6 +102,11 @@ void fsm_edit()
 			if (isButton2Pressed() == 1 || isButton2LongPressed() == 1)
 			{
 				duration_ADD++;
+				if (duration_G + duration_ADD > 99)
+				{
+					lcd_clear_display();
+					duration_ADD = 0;
+				}
 				button2_flag = 0;
 				button2_long_pressed = 0;
 			}
@@ -112,10 +118,6 @@ void fsm_edit()
 			if (isButton3Pressed() == 1)
 			{
 				duration_G += duration_ADD;
-				if (duration_G > 99)
-				{
-					duration_G = 1;
-				}
 				duration_ADD = 0;
 				button3_flag = 0;
 			}
@@ -212,6 +214,12 @@ void fsm_edit()
 				button2_flag = 0;
 			}
 			break;
+	}
+	if ((duration_R == 99) && (duration_G == 99) && (duration_Y == 97))
+	{
+		duration_R = duration_R_default;
+		duration_Y = duration_Y_default;
+		duration_G = duration_G_default;
 	}
 }
 
