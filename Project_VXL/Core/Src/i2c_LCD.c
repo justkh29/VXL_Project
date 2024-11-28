@@ -79,8 +79,8 @@ void lcd_goto_XY (int row, int col)
 
 void lcd_display(int row, int col, int value)
 {
-	char buffer[15];
-	sprintf(buffer, "%d", value);
+	char buffer[12];
+	sprintf(buffer, "%-11d", value);
 	lcd_goto_XY(row, col);
 	lcd_send_string(buffer);
 }
