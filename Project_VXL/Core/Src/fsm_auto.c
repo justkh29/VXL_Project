@@ -23,7 +23,6 @@ void fsm_auto_run()
 			{
 				lcd_display(1, 0, count);
 				lcd_display(2, 0, count + duration_Y);
-				if (count % 10 == 0) lcd_clear_display();
 				count--;
 				if (count <= 0)
 				{
@@ -45,14 +44,12 @@ void fsm_auto_run()
 			{
 				lcd_display(1, 0, count);
 				lcd_display(2, 0, count);
-				if (count % 10 == 0) lcd_clear_display();
 				count--;
 				if (count <= 0)
 				{
 					ledReset();
 					status = 3;
 					count = duration_R - duration_Y;
-					lcd_clear_display();
 				}
 				timer_flag[0] = 0;
 				setTimer(0, 1000);
@@ -68,14 +65,12 @@ void fsm_auto_run()
 			{
 				lcd_display(1, 0, count + duration_Y);
 				lcd_display(2, 0, count);
-				if (count % 10 == 0) lcd_clear_display();
 				count--;
 				if (count <= 0)
 				{
 					ledReset();
 					status = 4;
 					count = duration_Y;
-					lcd_clear_display();
 				}
 				timer_flag[0] = 0;
 				setTimer(0, 1000);
@@ -91,14 +86,12 @@ void fsm_auto_run()
 			{
 				lcd_display(1, 0, count);
 				lcd_display(2, 0, count);
-				if (count % 10 == 0) lcd_clear_display();
 				count--;
 				if (count <= 0)
 				{
 					ledReset();
 					status = 1;
 					count = duration_G;
-					lcd_clear_display();
 				}
 				timer_flag[0] = 0;
 				setTimer(0, 1000);
