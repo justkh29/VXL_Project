@@ -99,7 +99,7 @@ void fsm_edit()
 			HAL_GPIO_WritePin(D8_GPIO_Port, D8_Pin, RESET);
 			HAL_GPIO_WritePin(D9_GPIO_Port, D9_Pin, SET);
 			HAL_GPIO_WritePin(D10_GPIO_Port, D10_Pin, RESET);
-			if (isButton2Pressed() == 1 || isButton2LongPressed() == 1)
+			if (isButton2Pressed() == 1)
 			{
 				duration_ADD++;
 				if (duration_G + duration_ADD > 99)
@@ -108,6 +108,15 @@ void fsm_edit()
 					duration_ADD = 0;
 				}
 				button2_flag = 0;
+			}
+			if (isButton2LongPressed() == 1)
+			{
+				duration_ADD--;
+				if (duration_G + duration_ADD < 0)
+				{
+					lcd_clear_display();
+					duration_ADD = 0;
+				}
 				button2_long_pressed = 0;
 			}
 			lcd_goto_XY(1, 0);
