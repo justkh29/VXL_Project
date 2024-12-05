@@ -21,7 +21,7 @@ void fsm_edit()
 			HAL_GPIO_WritePin(D8_GPIO_Port, D8_Pin, SET);
 			HAL_GPIO_WritePin(D9_GPIO_Port, D9_Pin, SET);
 			HAL_GPIO_WritePin(D10_GPIO_Port, D10_Pin, SET);
-			if (isButton2Pressed() == 1 || isButton2LongPressed() == 1)
+			if (isButton2Pressed() == 1)
 			{
 				duration_ADD++;
 				if (duration_ADD + duration_R > 99)
@@ -30,6 +30,15 @@ void fsm_edit()
 					duration_ADD = 0;
 				}
 				button2_flag = 0;
+			}
+			if (isButton2LongPressed() == 1)
+			{
+				duration_ADD--;
+				if (duration_R + duration_ADD <= 0 || duration_R + duration_ADD - 1 < duration_Y)
+				{
+					lcd_clear_display();
+					duration_ADD = 0;
+				}
 				button2_long_pressed = 0;
 			}
 
@@ -62,7 +71,7 @@ void fsm_edit()
 			HAL_GPIO_WritePin(D8_GPIO_Port, D8_Pin, SET);
 			HAL_GPIO_WritePin(D9_GPIO_Port, D9_Pin, RESET);
 			HAL_GPIO_WritePin(D10_GPIO_Port, D10_Pin, SET);
-			if (isButton2Pressed() == 1 || isButton2LongPressed() == 1)
+			if (isButton2Pressed() == 1)
 			{
 				duration_ADD++;
 				if ((duration_Y + duration_ADD > duration_R - 1) || (duration_Y + duration_ADD > duration_G - 2))
@@ -71,6 +80,15 @@ void fsm_edit()
 					duration_ADD = 0;
 				}
 				button2_flag = 0;
+			}
+			if (isButton2LongPressed() == 1)
+			{
+				duration_ADD--;
+				if (duration_Y + duration_ADD <= 0)
+				{
+					lcd_clear_display();
+					duration_ADD = 0;
+				}
 				button2_long_pressed = 0;
 			}
 			lcd_goto_XY(1, 0);
@@ -112,7 +130,7 @@ void fsm_edit()
 			if (isButton2LongPressed() == 1)
 			{
 				duration_ADD--;
-				if (duration_G + duration_ADD < 0)
+				if (duration_G + duration_ADD <= 0 || duration_G + duration_ADD - 2 < duration_Y)
 				{
 					lcd_clear_display();
 					duration_ADD = 0;
