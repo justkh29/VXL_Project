@@ -16,17 +16,17 @@ void fsm_auto_run()
 			status = 1;
 			setTimer(0, 1000);
 			count = duration_G;
+			ledGreen_Red();
 			break;
 		case GREEN_RED:
-			ledGreen_Red();
 			if (timer_flag[0] == 1)
 			{
+				ledGreen_Red();
 				lcd_display(1, 0, count);
 				lcd_display(2, 0, count + duration_Y);
 				count--;
 				if (count <= 0)
 				{
-					ledReset();
 					status = 2;
 					count = duration_Y;
 				}
@@ -39,15 +39,14 @@ void fsm_auto_run()
 			}
 			break;
 		case YELLOW_RED:
-			ledYellow_Red();
 			if (timer_flag[0] == 1)
 			{
+				ledYellow_Red();
 				lcd_display(1, 0, count);
 				lcd_display(2, 0, count);
 				count--;
 				if (count <= 0)
 				{
-					ledReset();
 					status = 3;
 					count = duration_R - duration_Y;
 				}
@@ -60,15 +59,14 @@ void fsm_auto_run()
 			}
 			break;
 		case RED_GREEN:
-			ledRed_Green();
 			if (timer_flag[0] == 1)
 			{
+				ledRed_Green();
 				lcd_display(1, 0, count + duration_Y);
 				lcd_display(2, 0, count);
 				count--;
 				if (count <= 0)
 				{
-					ledReset();
 					status = 4;
 					count = duration_Y;
 				}
@@ -81,15 +79,14 @@ void fsm_auto_run()
 			}
 			break;
 		case RED_YELLOW:
-			ledRed_Yellow();
 			if (timer_flag[0] == 1)
 			{
+				ledRed_Yellow();
 				lcd_display(1, 0, count);
 				lcd_display(2, 0, count);
 				count--;
 				if (count <= 0)
 				{
-					ledReset();
 					status = 1;
 					count = duration_G;
 				}
